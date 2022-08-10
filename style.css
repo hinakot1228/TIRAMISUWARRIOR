@@ -1,0 +1,303 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'game'; 
+  src: url('./fonts/DungGeunMo.ttf') format('truetype');
+}
+
+p, a, input, textarea {
+  font-family: 'game';
+}
+
+a {
+  text-decoration: none;
+}
+
+input, textarea {
+  border: none;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+/*===============================
+    メイン
+================================*/
+
+.main_section {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(36,6,202);
+}
+
+.background_image {
+  margin: 0 auto;
+  height: 100%;
+  width: 80%;
+  background-repeat:  no-repeat; 
+  background-size: cover;               
+  background-image: url(./images/background_nightsky.gif);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title_wrapper {
+  background-color: rgb(36,6,202);
+  padding: 20px;
+  border: solid 3px #fff;
+}
+
+.title_top {
+  margin-bottom: 20px;
+}
+
+.title_bottom {
+  display: flex;
+  justify-content: space-around;
+}
+
+.title_text {
+  color: #fff;
+  font-size: 20px;
+}
+
+/*===============================
+    メッセージ
+================================*/
+
+.message_section {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(62, 141, 75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message_wrapper {
+  background-color: aqua;
+  padding: 20px;
+  border: solid 3px #fff;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.message_top_wrapper, .message_bottom_wrapper{
+  display: flex;
+  flex-direction: row;
+}
+
+.message_top_wrapper {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.message_top_text_wrapper, .message_bottom_text_wrapper {
+  width: 74%;
+  background-color: #f5f5f5;
+  border: solid 2.5px #000;
+  padding: 16px;
+}
+
+.message_bottom_text_wrapper {
+  height: 59px;
+  margin-right: 18px;
+}
+
+.message_top_icon_wrapper, .message_bottom_icon_wrapper {
+  width: 20%;
+  background-color: aqua;
+  margin: 0 auto;
+}
+
+.message_icon_buttons_top, .message_icon_buttons_bottom {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+.message_bottom_icon_wrapper {
+  text-align: right;
+}
+
+.message_icon {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(142, 224, 156);
+  padding: 5px;
+  border: solid 2.5px #000;
+  margin-bottom: 2px;
+}
+
+.message_icon_button {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(182, 182, 182);
+  padding: 4px;
+  border: solid 2.5px #000;
+  margin-right: 8.5px;
+  margin-bottom: 6px;
+}
+
+.message_input_button {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(182, 182, 182);
+  padding: 4px;
+  border: solid 2.5px #000;
+}
+
+.message_text_small {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.message_bottom_text_wrapper {
+  background-color: #f5f5f5;
+  font-size: 16px;
+  width: 100%;
+}
+
+.message_line {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+}
+
+.message_line div {
+  width: 12%;
+  display: flex;
+  margin-top: 3px;
+  /* background-color: red; */
+}
+
+.message_line p {
+  width: 88%;
+  /* background-color: blue; */
+  overflow-wrap: break-word;
+}
+
+.message_bar {
+  width: 40px;
+  height: 12px;
+  padding-right: 2%;
+}
+
+.message_input_text_appear, .message_text_appear {
+ visibility: hidden;
+}
+
+/*===============================
+    タロット
+================================*/
+.tarot_section {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(146, 47, 132);
+}
+
+.tarot_background_image {
+  margin: 0 auto;
+  height:  100%;
+  width: 50%;
+  background-color: rgb(151, 19, 131);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tarot_top_container {
+  background-color: pink;
+  height: 50%;
+  padding: 5% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.tarot_bottom_container {
+  background-color: pink;
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tarot_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+}
+
+#image1, #image3, #image5, #image7, #image9, #image11, #image13, #image15, #image17, #image19 {
+  position:absolute; 
+  z-index:6; 
+  cursor:pointer; 
+  width:100px;
+  height:150px;
+  background-image: url("/img/site/bg.png");
+}
+
+#image2, #image4, #image6, #image8, #image10, #image12, #image14, #image16, #image18, #image20 { 
+  position:absolute; 
+  z-index:5; 
+  cursor:pointer;
+}
+
+.demo_stage {
+  height: 150px;
+  width: 100%;
+}
+
+.tarot_message_wrapper {
+  background-color: #fff;
+  width: 70%;
+  height: 50%;
+  padding: 20px 30px 18px;
+  border: solid 3.5px #000;
+  position: relative;
+}
+
+.tarot_message_bottom_wrapper {
+  position: absolute;
+  right: 20px;
+  bottom: 14px;
+}
+
+.tarot_message_triangle {
+  z-index: 100;
+  width: 16px;
+
+  animation: move-y .5s infinite alternate ease-in-out;
+}
+
+@keyframes move-y {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(3px);
+  }
+}
+
+.tarot_message_text p {
+  padding-bottom: 26px;
+}
